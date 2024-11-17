@@ -24,7 +24,7 @@ public class UserSeeder implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         ArrayList<User> users = new ArrayList<>();
-        users.add(new User("User 1", "user1@webtech.id ", passwordEncoder.encode("password1")));
+        users.add(new User("User 1", "user1@webtech.id", passwordEncoder.encode("password1")));
         users.add(new User("User 2", "user2@webtech.id", passwordEncoder.encode("password2")));
         users.add(new User("User 3", "user3@worldskills.org", passwordEncoder.encode("password3")));
 
