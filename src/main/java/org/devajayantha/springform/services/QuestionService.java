@@ -30,4 +30,8 @@ public class QuestionService {
 
         return questionRepository.save(question);
     }
+
+    public void deleteQuestion(String slug, Long questionId) {
+        questionRepository.deleteById(questionId);
+    }
 }
