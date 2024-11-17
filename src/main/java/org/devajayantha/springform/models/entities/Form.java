@@ -3,6 +3,8 @@ package org.devajayantha.springform.models.entities;
 import jakarta.persistence.*;
 import lombok.Getter;
 
+import java.util.List;
+
 @Entity
 @Table(name="forms")
 public class Form {
@@ -26,6 +28,9 @@ public class Form {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name= "created_id", referencedColumnName = "id", nullable = false)
     private User createdBy;
+
+    @OneToMany(mappedBy = "form", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private List<Question> questions;
 
     public Form() {}
 
@@ -84,4 +89,8 @@ public class Form {
     public void setCreatedBy(User createdBy) {
         this.createdBy = createdBy;
     }
+
+    public List<Question> getQuestions() {return questions;}
+
+    public void setQuestions(List<Question> questions) {this.questions = questions;}
 }

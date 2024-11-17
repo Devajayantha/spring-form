@@ -1,8 +1,11 @@
 package org.devajayantha.springform.models.requests;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.List;
 
 @Getter
 @Setter
@@ -17,4 +20,6 @@ public class FormRequest {
     public String slug;
 
     public Boolean is_one_response = Boolean.FALSE;
+
+    public List<String> allowed_domains = List.of();
 }
