@@ -1,0 +1,1062 @@
+{
+	"info": {
+		"_postman_id": "fe56b341-beb7-4321-bbd9-80bba29d6580",
+		"name": "Spring Form",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5740451"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"user1@webtech.id\",\n    \"password\": \"password1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response 200",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"user1@webtech.id\",\n    \"password\": \"password1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 18 Nov 2024 00:35:36 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"login successful\",\n    \"data\": {\n        \"name\": \"User 1\",\n        \"email\": \"user1@webtech.id\",\n        \"accessToken\": \"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUB3ZWJ0ZWNoLmlkIiwiaWF0IjoxNzMxODkwMTM2LCJleHAiOjE3MzE5NzY1MzZ9.8T5wkEQSz7fIsE50rskVZKZIb27sqC00oDF8XIlXprM\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Form",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUB3ZWJ0ZWNoLmlkIiwiaWF0IjoxNzMxODIxNjI2LCJleHAiOjE3MzE5MDgwMjZ9.FgSwLt61l3fiSuB9HWzaRp_Fs2a1abteXA9-SeykUKQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Web Pemrogramm\",\n    \"slug\": \"web-perm-2\",\n    \"description\": \"lorensum ipsum\",\n    \"is_one_response\": true,\n    \"allowed_domains\": [\"@webtech.id\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/form",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"form"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response 200",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Web Pemrogramm\",\n    \"slug\": \"web-perm-2\",\n    \"description\": \"lorensum ipsum\",\n    \"is_one_response\": true,\n    \"allowed_domains\": [\"@webtech.id\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/form",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"form"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 18 Nov 2024 00:35:58 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Create form success\",\n    \"data\": {\n        \"id\": 25,\n        \"name\": \"Web Pemrogramm\",\n        \"slug\": \"web-perm-2\",\n        \"description\": \"lorensum ipsum\",\n        \"limit_one_response\": true,\n        \"creator_id\": 5\n    }\n}"
+				},
+				{
+					"name": "Response 422",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"slug\": \"web-perm-2\",\n    \"description\": \"lorensum ipsum\",\n    \"is_one_response\": true,\n    \"allowed_domains\": [\"@webtech.id\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/form",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"form"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 18 Nov 2024 00:36:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"message\": \"Invalid field\",\n    \"data\": {\n        \"name\": [\n            \"The name field is required.\"\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Question",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUB3ZWJ0ZWNoLmlkIiwiaWF0IjoxNzMxODIxNjI2LCJleHAiOjE3MzE5MDgwMjZ9.FgSwLt61l3fiSuB9HWzaRp_Fs2a1abteXA9-SeykUKQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"New Java Version\",\n    \"choice_type\": \"SHORT_ANSWER\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/form/:slug/question",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"form",
+						":slug",
+						"question"
+					],
+					"variable": [
+						{
+							"key": "slug",
+							"value": "web-perm-1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response 200",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"New Java Version\",\n    \"choice_type\": \"SHORT_ANSWER\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/form/:slug/question",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"form",
+								":slug",
+								"question"
+							],
+							"variable": [
+								{
+									"key": "slug",
+									"value": "web-perm-1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 17 Nov 2024 16:50:44 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Add question success\",\n    \"data\": {\n        \"id\": 14,\n        \"form_id\": 24,\n        \"name\": \"New Java Version\",\n        \"choice_type\": \"Short Answer\",\n        \"is_required\": false,\n        \"choices\": []\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "List Form",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUB3ZWJ0ZWNoLmlkIiwiaWF0IjoxNzMxODIxNjI2LCJleHAiOjE3MzE5MDgwMjZ9.FgSwLt61l3fiSuB9HWzaRp_Fs2a1abteXA9-SeykUKQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/form",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"form"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response 200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/form",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"form"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 17 Nov 2024 16:30:35 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Get all forms success\",\n    \"data\": [\n        {\n            \"id\": 24,\n            \"name\": \"Web Pemrogramm\",\n            \"slug\": \"web-perm-1\",\n            \"description\": \"lorensum ipsum\",\n            \"limit_one_response\": true,\n            \"creator_id\": 5\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Detail Form",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUB3ZWJ0ZWNoLmlkIiwiaWF0IjoxNzMxODIxNjI2LCJleHAiOjE3MzE5MDgwMjZ9.FgSwLt61l3fiSuB9HWzaRp_Fs2a1abteXA9-SeykUKQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/form/:slug",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"form",
+						":slug"
+					],
+					"variable": [
+						{
+							"key": "slug",
+							"value": "web-perm-1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response 200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/form/:slug",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"form",
+								":slug"
+							],
+							"variable": [
+								{
+									"key": "slug",
+									"value": "web-perm-1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 17 Nov 2024 14:48:07 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Get form success\",\n    \"data\": {\n        \"id\": 24,\n        \"name\": \"Web Pemrogramm\",\n        \"slug\": \"web-perm-1\",\n        \"description\": \"lorensum ipsum\",\n        \"limit_one_response\": true,\n        \"creator_id\": 5,\n        \"questions\": [\n            {\n                \"id\": 10,\n                \"form_id\": 24,\n                \"name\": \"Mature Language\",\n                \"choice_type\": \"Multiple Choice\",\n                \"is_required\": true,\n                \"choices\": [\n                    \"Laravel\",\n                    \"Java\"\n                ]\n            },\n            {\n                \"id\": 11,\n                \"form_id\": 24,\n                \"name\": \"What is latest PHP Version\",\n                \"choice_type\": \"Paragraph\",\n                \"is_required\": true,\n                \"choices\": []\n            },\n            {\n                \"id\": 12,\n                \"form_id\": 24,\n                \"name\": \"What is JPA in JAVA\",\n                \"choice_type\": \"Paragraph\",\n                \"is_required\": true,\n                \"choices\": []\n            },\n            {\n                \"id\": 13,\n                \"form_id\": 24,\n                \"name\": \"Framework CSS\",\n                \"choice_type\": \"Short Answer\",\n                \"is_required\": false,\n                \"choices\": []\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Answer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUB3ZWJ0ZWNoLmlkIiwiaWF0IjoxNzMxODIxNjI2LCJleHAiOjE3MzE5MDgwMjZ9.FgSwLt61l3fiSuB9HWzaRp_Fs2a1abteXA9-SeykUKQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"answers\": [\n        {\n            \"question_id\": 10,\n            \"value\": \"Java\"\n        },\n        {\n            \"question_id\": 11,\n            \"value\": \"8.2\"\n        },\n        {\n            \"question_id\": 12,\n            \"value\": \"JAVA PERSINTANCE API\"\n        },\n        {\n            \"question_id\": 13,\n            \"value\": \"Bootstrap\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/form/:slug/answer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"form",
+						":slug",
+						"answer"
+					],
+					"variable": [
+						{
+							"key": "slug",
+							"value": "web-perm-1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response 200",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"answers\": [\n        {\n            \"question_id\": 10,\n            \"value\": \"Java\"\n        },\n        {\n            \"question_id\": 11,\n            \"value\": \"8.2\"\n        },\n        {\n            \"question_id\": 12,\n            \"value\": \"JAVA PERSINTANCE API\"\n        },\n        {\n            \"question_id\": 13,\n            \"value\": \"Bootstrap\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/form/:slug/answer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"form",
+								":slug",
+								"answer"
+							],
+							"variable": [
+								{
+									"key": "slug",
+									"value": "web-perm-1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 17 Nov 2024 15:22:18 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Submit response success\",\n    \"data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Answer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUB3ZWJ0ZWNoLmlkIiwiaWF0IjoxNzMxODIxNjI2LCJleHAiOjE3MzE5MDgwMjZ9.FgSwLt61l3fiSuB9HWzaRp_Fs2a1abteXA9-SeykUKQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/form/:slug/answer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"form",
+						":slug",
+						"answer"
+					],
+					"variable": [
+						{
+							"key": "slug",
+							"value": "web-perm-1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response 200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/form/:slug/answer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"form",
+								":slug",
+								"answer"
+							],
+							"variable": [
+								{
+									"key": "slug",
+									"value": "web-perm-1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 17 Nov 2024 16:30:00 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Get responses success\",\n    \"data\": [\n        {\n            \"date\": \"2024-11-17T15:22:18.645+00:00\",\n            \"user\": {\n                \"id\": 5,\n                \"name\": \"User 1\",\n                \"email\": \"user1@webtech.id\"\n            },\n            \"answers\": {\n                \"Mature Language\": \"Java\",\n                \"Framework CSS\": \"Bootstrap\",\n                \"What is latest PHP Version\": \"8.2\",\n                \"What is JPA in JAVA\": \"JAVA PERSINTANCE API\"\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Question",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUB3ZWJ0ZWNoLmlkIiwiaWF0IjoxNzMxODIxNjI2LCJleHAiOjE3MzE5MDgwMjZ9.FgSwLt61l3fiSuB9HWzaRp_Fs2a1abteXA9-SeykUKQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/form/:slug/question/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"form",
+						":slug",
+						"question",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "slug",
+							"value": "web-perm-1"
+						},
+						{
+							"key": "id",
+							"value": "14"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response 200",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/form/:slug/question/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"form",
+								":slug",
+								"question",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "slug",
+									"value": "web-perm-1"
+								},
+								{
+									"key": "id",
+									"value": "14"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 17 Nov 2024 16:57:13 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Remove question success\",\n    \"data\": null\n}"
+				}
+			]
+		}
+	]
+}

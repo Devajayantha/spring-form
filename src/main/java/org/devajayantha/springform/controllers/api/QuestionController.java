@@ -35,7 +35,6 @@ public class QuestionController {
 
     @DeleteMapping("{id}")
     public ApiResponse deleteQuestion(@PathVariable String slug, @PathVariable Long id) {
-        System.out.println("test");
         questionService.deleteQuestion(slug, id);
 
         return ApiResponse.success("Remove question success", null);
